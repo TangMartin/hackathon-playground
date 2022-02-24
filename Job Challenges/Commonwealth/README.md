@@ -22,9 +22,9 @@ For this project, I wanted to step out of my comfort zone and program in a langu
 
 Furthur improvements include:
 
-1. Flexibility in the wordlist that is used for validation (allow users to input their own wordlist via file or a url)
-2. Incorporating defensive programming in the user's input by checking for edge cases as well as the prefiltered input such as spaces, symbols, special characters
-3. Experimenting with different algorithms rather than a linear search to optimize the wordlist validation (ex. hashtable)
+1. Flexibility in the wordlist that is used for validation (allow users to input their own wordlist via file or a url) - This allow users to have more freedom in the words they want to be tested and integrate non-english wordlists.
+2. Incorporating defensive programming in the user's input by checking for edge cases as well as the prefiltered input such as spaces, symbols, or special characters
+3. Experimenting with different algorithms rather than a linear search to optimize wordlist validation (ex. hashtable) - Due to how many words there are in the wordlist, this will increase the speed in finding whether the anagram word is in the list or not.
 
 
 
