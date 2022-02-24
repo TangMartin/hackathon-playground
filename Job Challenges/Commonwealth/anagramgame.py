@@ -2,18 +2,7 @@ import urllib.request
 from collections import Counter
 
 letterset = "areallylongword"
-scores = {
-    "Score #1": 0,
-    "Score #2": 0,
-    "Score #3": 0,
-    "Score #4": 0,
-    "Score #5": 0,
-    "Score #6": 0,
-    "Score #7": 0,
-    "Score #8": 0,
-    "Score #9": 0,
-    "Score #10": 0,
-}
+scores = {}
 
 
 def checkword(user_wordinput):
@@ -46,7 +35,7 @@ def checkforletterset(user_wordinput):
 print("\nWelcome to the Anagram Game by Martin Tang")
 
 while True:
-    print("\nThe Letter Set is: %s (default)\n" %letterset)
+    print("\nThe Letter Set is: %s \n" %letterset)
     inputword = input("1. Enter /no to Quit \n2. Print /score to see the Top 10 Highest Submissions \n3. Enter /letterset to change the Letter Set \n4. Enter a word to play: ")
     
     if inputword == "/no":
