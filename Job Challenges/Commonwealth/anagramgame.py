@@ -2,17 +2,17 @@ import urllib.request
 from collections import Counter
 
 letterset = "areallylongword"
-dict = {
-    "Score #1": "0",
-    "Score #2": "0",
-    "Score #3": "0",
-    "Score #4": "0",
-    "Score #5": "0",
-    "Score #6": "0",
-    "Score #7": "0",
-    "Score #8": "0",
-    "Score #9": "0",
-    "Score #10": "0",
+scores = {
+    "Score #1": 0,
+    "Score #2": 0,
+    "Score #3": 0,
+    "Score #4": 0,
+    "Score #5": 0,
+    "Score #6": 0,
+    "Score #7": 0,
+    "Score #8": 0,
+    "Score #9": 0,
+    "Score #10": 0,
 }
 
 
@@ -21,7 +21,6 @@ def checkword(user_wordinput):
     for line in data:
         line_words = line.decode('utf-8').split()
         if line_words[0] == user_wordinput:
-            print('it works')
             return True
 
 def checkforduplicates(user_wordinput):
@@ -48,23 +47,26 @@ print("\nWelcome to the Anagram Game by Martin Tang\n")
 print("The Word for Today is: areallylongword \n")
 
 while True:
-    inputword = input("1. Enter NO to Quit \n2. Print SCORE to see the Top 10 Highest Submissions \n3. Enter a word to play: ")
-    if inputword == "NO":
-        print("Thank you for playing! Have a great day")
-    if checkforduplicates(inputword):
-        if checkforletterset(inputword):
-            if checkword(inputword):
-                print("Word is found - Score Counted")
-                print(len(inputword))
-            else:
-                print("Not found in databse")       
-        else:
-            print('Not found in letter set')
+    inputword = input("1. Enter /no to Quit \n2. Print /score to see the Top 10 Highest Submissions \n3. Enter a word to play: ")
+    if inputword == "/no":
+        print("\nThank you for playing! Have a great day")
+        break
+    elif inputword == "/score":
+        print("\n  Top 10 Highest Scores \n")
+        sortedscores = Counter(scores)
+        for word,score in sortedscores.most_common(10):
+            print("%15s - %s" % (word, score)) 
+        print("\n")
     else:
-        print('Duplicates')
-    
-
-
-
-
-
+        if checkforduplicates(inputword):
+            if checkforletterset(inputword):
+                if checkword(inputword):
+                    print("\n")
+                    print(inputword, "is Valid - Score Counted\n")
+                    scores[inputword] = len(inputword)
+                else:
+                    print("Not found in databse")       
+            else:
+                print('Not found in letter set')
+        else:
+            print('Duplicates')
