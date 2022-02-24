@@ -1,16 +1,25 @@
 import urllib.request
 from collections import Counter
 
+# Declaration of variables
 letterset = "areallylongword"
 scores = {}
 
 
-def checkword(user_wordinput):
+# Checks if the word inputted by the user is in the wordlist
+#
+# @parameter user_wordinput <- Word inputted by the user
+
+def checkword(user_wordinput): 
     data = urllib.request.urlopen("https://cwcodetest.s3.ca-central-1.amazonaws.com/wordlist.txt")
     for line in data:
         line_words = line.decode('utf-8').split()
         if line_words[0] == user_wordinput:
             return True
+
+# Checks if any letters are used more than once hence duplicate of letters
+#
+# @parameter user_wordinput <- Word inputted by the user
 
 def checkforduplicates(user_wordinput):
     duplicate = Counter(user_wordinput)
@@ -18,6 +27,10 @@ def checkforduplicates(user_wordinput):
         if number > 1:
             return False
     return True
+
+# Checks if each letter in the word inputted by the user appears in the letterset
+#
+# @parameter user_wordinput <- Word inputted by the user
 
 def checkforletterset(user_wordinput):
     counter = 0
@@ -35,24 +48,30 @@ def checkforletterset(user_wordinput):
 print("\nWelcome to the Anagram Game by Martin Tang")
 
 while True:
+
+    #Prompts the user for input
     print("\nThe Letter Set is: %s \n" %letterset)
     inputword = input("1. Enter /no to Quit \n2. Print /score to see the Top 10 Highest Submissions \n3. Enter /letterset to change the Letter Set \n4. Enter a word to play: ")
     
+    # Command for users to quit
     if inputword == "/no":
         print("\nThank you for playing! Have a great day")
         break
-
+    
+    # Command for users to view the score
     elif inputword == "/score":
-        print("\n  Top 10 Highest Scores \n")
+        print("\n    Top 10 Highest Scores \n")
         sortedscores = Counter(scores)
         for word,score in sortedscores.most_common(10):
             print("%15s - %s" % (word, score)) 
         print("\n")
     
+    # Command for users to change the letterset
     elif inputword == "/letterset":
         changeset = input("\nEnter the word you want to become the letterset: ")
         letterset = changeset
     
+    # Validation for user input
     else:
         if checkforduplicates(inputword):
             if checkforletterset(inputword):
