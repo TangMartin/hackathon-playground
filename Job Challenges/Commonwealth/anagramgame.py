@@ -43,30 +43,36 @@ def checkforletterset(user_wordinput):
         return False
 
 
-print("\nWelcome to the Anagram Game by Martin Tang\n")
-print("The Word for Today is: areallylongword \n")
+print("\nWelcome to the Anagram Game by Martin Tang")
 
 while True:
-    inputword = input("1. Enter /no to Quit \n2. Print /score to see the Top 10 Highest Submissions \n3. Enter a word to play: ")
+    print("\nThe Letter Set is: %s (default)\n" %letterset)
+    inputword = input("1. Enter /no to Quit \n2. Print /score to see the Top 10 Highest Submissions \n3. Enter /letterset to change the Letter Set \n4. Enter a word to play: ")
+    
     if inputword == "/no":
         print("\nThank you for playing! Have a great day")
         break
+
     elif inputword == "/score":
         print("\n  Top 10 Highest Scores \n")
         sortedscores = Counter(scores)
         for word,score in sortedscores.most_common(10):
             print("%15s - %s" % (word, score)) 
         print("\n")
+    
+    elif inputword == "/letterset":
+        changeset = input("\nEnter the word you want to become the letterset: ")
+        letterset = changeset
+    
     else:
         if checkforduplicates(inputword):
             if checkforletterset(inputword):
                 if checkword(inputword):
-                    print("\n")
-                    print(inputword, "is Valid - Score Counted\n")
+                    print("\n %s is VALID - Score Counted\n" % inputword)
                     scores[inputword] = len(inputword)
                 else:
-                    print("Not found in databse")       
+                    print("\n NOT VALID - Not found in databse \n")       
             else:
-                print('Not found in letter set')
+                print('\n NOT VALID - Not found in letter set \n')
         else:
-            print('Duplicates')
+            print('\n NOT VALID - Duplicates \n')
