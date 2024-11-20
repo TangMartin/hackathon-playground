@@ -1,0 +1,33 @@
+{
+      "layout": {
+            "recipename": "recipename",
+            "totaltime": "totaltime",
+            "ingredients": "ingredients",
+            "instructions": "instructions",
+            "nutrients": "nutrients"
+      },
+      "One Pot Garlic Parmesan Pasta Recipe by Tasty": {
+            "recipename": "One Pot Garlic Parmesan Pasta Recipe by Tasty",
+            "totaltime": 39,
+            "ingredients": [
+                  "2 tablespoons unsalted butter",
+                  "4 cloves garlic, minced",
+                  "2 cups chicken broth",
+                  "1 cup milk",
+                  "8 oz fettuccine",
+                  "salt, to taste",
+                  "pepper, to taste",
+                  "\u00bc cup grated parmesan cheese",
+                  "2 tablespoons fresh parsley, chopped"
+            ],
+            "instructions": "Heat unsalted butter in a large skillet over medium high heat. Add garlic and cook, stirring frequently, until fragrant, about 1-2 minutes.\nAdd in the chicken broth, milk, and fettuccine. Season with salt and pepper.\nBring the pot to a boil, then reduce heat and simmer, stirring occasionally, until pasta is cooked through, about 18-20 minutes.\nStir in Parmesan. If the mixture is too thick, add more milk as needed until desired consistency is reached.\nServe immediately, and top with parsley.\nEnjoy!",
+            "nutrients": {
+                  "calories": "694 calories",
+                  "carbohydrateContent": "74 grams",
+                  "fatContent": "37 grams",
+                  "fiberContent": "1 gram",
+                  "proteinContent": "11 grams",
+                  "sugarContent": "9 grams"
+            }
+      }
+}

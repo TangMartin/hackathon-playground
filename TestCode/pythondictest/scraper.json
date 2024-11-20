@@ -1,0 +1,80 @@
+{
+      "example": {
+            "recipe_id": "n/a",
+            "name": "n/a",
+            "created_time": "n/a",
+            "user_id": "n/a",
+            "protein": "n/a",
+            "carbs": "n/a",
+            "calories": "n/a",
+            "servings": "n/a",
+            "vegetarian": "n/a",
+            "vegan": "n/a",
+            "cooking_time": "n/a"
+      },
+      "Spinach and Feta Turkey Burgers": {
+            "recipe_id": null,
+            "name": "Spinach and Feta Turkey Burgers",
+            "created_time": null,
+            "user_id": null,
+            "carbs": 2.4,
+            "protein": 27.4,
+            "calories": 233.4,
+            "servings": 8,
+            "vegetarian": false,
+            "vegan": false,
+            "cooking_time": 35
+      },
+      "Pumpkin Chai Glazed Donuts Recipe by Tasty": {
+            "recipe_id": null,
+            "name": "Pumpkin Chai Glazed Donuts Recipe by Tasty",
+            "created_time": null,
+            "user_id": null,
+            "carbs": 2.4,
+            "protein": 27.4,
+            "calories": 233.4,
+            "servings": 9,
+            "vegetarian": true,
+            "vegan": false,
+            "cooking_time": 125
+      },
+      "Butternut Squash Soup": {
+            "recipe_id": null,
+            "name": "Butternut Squash Soup",
+            "created_time": null,
+            "user_id": null,
+            "carbs": 20.2,
+            "protein": 7.7,
+            "calories": 397.5,
+            "servings": 6,
+            "vegetarian": true,
+            "vegan": false,
+            "cooking_time": 60
+      },
+      "Chopped Brussels Sprout Salad": {
+            "recipe_id": null,
+            "name": "Chopped Brussels Sprout Salad",
+            "created_time": null,
+            "user_id": null,
+            "carbs": 22.2,
+            "protein": null,
+            "calories": 230.4,
+            "servings": 8,
+            "vegetarian": true,
+            "vegan": false,
+            "cooking_time": 20
+      },
+      "Vegan Lasagna Soup Recipe by Tasty": {
+            "recipe_id": null,
+            "name": "Vegan Lasagna Soup Recipe by Tasty",
+            "created_time": null,
+            "user_id": null,
+            "carbs": null,
+            "protein": null,
+            "calories": null,
+            "servings": 6,
+            "vegetarian": true,
+            "vegan": true,
+            "cooking_time": 30
+      }
+}
